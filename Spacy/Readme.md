@@ -5,3 +5,19 @@ Our goal here is to produce an accurate model that we could then use to process 
 
 
 Dataset : https://www.kaggle.com/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
+
+## Repository contains :
+* **Python Notebook** : download it and run it in your code
+  * Remember to install the following module <br><br>
+  ``` 
+  !conda install -c conda-forge spacy
+  !python -m spacy download en
+  ```
+
+* **Pickle file** : it's a pre-trained model of your above notebook so , you can just download and load anywhere
+
+``` 
+import pickle
+model = pickle.load(modelname)
+print(model.predict(["Worst movie ever)) 
+```
