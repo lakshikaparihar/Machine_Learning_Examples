@@ -19,5 +19,5 @@ Dataset : https://www.kaggle.com/lakshmi25npathi/imdb-dataset-of-50k-movie-revie
 ``` 
 import pickle
 model = pickle.load(modelname)
-print(model.predict(["Worst movie ever)) 
+print(model.predict(["Worst movie ever"])) 
 ```
