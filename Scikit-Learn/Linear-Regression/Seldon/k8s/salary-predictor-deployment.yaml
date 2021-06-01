@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: salary-predictor-deployment
+  labels:
+    app: salary-predictor
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:  # Will look for Pods that match these labels 
+      app: salary-predictor
+  template:      # Pod Template
+    metadata:
+      labels:
+        app: salary-predictor
+    spec:
+      containers:
+      - name: salary-predictor-container
+        image: salary-predictor:latest
+        imagePullPolicy: Never
+        ports:
+        - name: port5000
+          containerPort: 5000
+        - name: port6000
+          containerPort: 6000
+        - name: http
+          containerPort: 9000
