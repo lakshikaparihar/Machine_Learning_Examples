@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tensor-movie
+  labels:
+    app: tensor-movie
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tensor-movie
+  template:    
+    metadata:
+      labels:
+        app: tensor-movie
+    spec:
+      containers:
+      - name: tensor-movie
+        image: nishkarshraj/movie-genre
+        imagePullPolicy: Always
+        ports:
+        - name: port5000
+          containerPort: 5000
+        - name: port6000
+          containerPort: 6000
+        - name: http
+          containerPort: 9000
+

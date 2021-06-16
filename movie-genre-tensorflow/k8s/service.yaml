@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tensor-movie
+spec:
+  selector:
+    app: tensor-movie
+  ports:
+    - protocol: TCP
+      port: 9000
+      name: http
+      targetPort: 9000

@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: news
+  labels:
+    app: news
+    version: v1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: news
+  template:    
+    metadata:
+      labels:
+        app: news
+    spec:
+      containers:
+      - name: py-wrapper
+        image: nishkarshraj/lakshika
+        imagePullPolicy: Always
+        ports:
+        - name: port5000
+          containerPort: 5000
+        - name: port6000
+          containerPort: 6000
+        - name: http
+          containerPort: 9000

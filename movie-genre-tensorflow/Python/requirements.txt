@@ -1,0 +1,6 @@
+tensorflow==2.4.1
+Keras==2.4.3
+pandas
+grpcio==1.32.0
+grpcio-reflection==1.32.0
+h5py==2.10.0
