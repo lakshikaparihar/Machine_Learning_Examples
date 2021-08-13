@@ -18,4 +18,4 @@ regressor.fit(X, y)
 print(regressor.predict([[6.5]]))
 
 # Saving the model
-pickle.dump(regressor,open("Sklearn-Decision-Tree-Regression","wb"))
+pickle.dump(regressor,open("Sklearn-Decision-Tree-Regression.pkl","wb"))
